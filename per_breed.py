@@ -15,3 +15,11 @@ clip = torch.load("clip_pets.pt")
 p = per_query_precision(clip["emb"], clip["labels"])
 print(p.shape)
 print(p.mean())
+
+scores = {}
+for b in range(37):
+    scores[classes[b]] = p[clip["labels"] == b].mean().item()
+
+ranked = sorted(scores.items(), key=lambda x: x[1])
+print("Hardest 5:", ranked[:5])
+print("Easiest 5:", ranked[-5:])
