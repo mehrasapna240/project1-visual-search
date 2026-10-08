@@ -23,3 +23,16 @@ for b in range(37):
 ranked = sorted(scores.items(), key=lambda x: x[1])
 print("Hardest 5:", ranked[:5])
 print("Easiest 5:", ranked[-5:])
+
+# for DINO
+dino = torch.load('dino_pets.pt')
+p_dino = per_query_precision(dino['emb'], dino['labels'])
+print(p_dino.shape)
+print(p_dino.mean())
+
+scores = {}
+for b in range(37):
+    scores[classes[b]] = p_dino[dino['labels']==b].mean().item()
+ranked = sorted(scores.items(), key=lambda x:x[1])
+print("Hardest 5:", ranked[:5])
+print("Easiest 5:", ranked[-5:])   
