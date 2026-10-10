@@ -68,9 +68,17 @@ Files are numbered in the order they were written.
   not a bug. DINO still leads at the first result.
 
 ## 10_confusion.py (in progress)
-- Step 1: count how often CLIP's nearest neighbour is the wrong breed.
-- Expected: 184 of 500 (500 minus 316 right at Precision@1 of 0.632).
-- Next: which breed pairs get confused, and whether CLIP and DINO make the same mistakes.
+## 10_confusion.py
+- For each model, counts how often the nearest neighbour is the wrong breed (CLIP 184 of 500,
+  DINO 85), and which (true breed -> found breed) pairs are most common.
+- Both models: Ragdoll -> Birman is the top pair (CLIP 10, DINO 8). Beagle/Basset Hound is
+  mixed up by both.
+- CLIP only: Siamese -> Birman. DINO errors cluster in lookalike families (bull terriers,
+  spotted cats, grey short-haired cats).
+- DINO's top 10 pairs cover at least 42% of its mistakes; CLIP's cover about 22%, so its errors
+  are more scattered.
+- No cat/dog confusions in either top 10. Counts are small (2 to 4), so only the top pair is
+  strong evidence.
 
 ## Results so far
 
