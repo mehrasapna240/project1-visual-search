@@ -1,0 +1,8 @@
+﻿torch.Size([500])
+tensor(0.4708)
+Hardest 5: [('Maine Coon', 0.10909091681241989), ('Siamese', 0.10909091681241989), ('Great Pyrenees', 0.2222222238779068), ('Egyptian Mau', 0.28333333134651184), ('Ragdoll', 0.2875000238418579)]
+Easiest 5: [('Pomeranian', 0.6714286208152771), ('Birman', 0.7066667675971985), ('Beagle', 0.7111111283302307), ('Sphynx', 0.73333340883255), ('Pug', 0.8857143521308899)]
+torch.Size([500])
+tensor(0.7396)
+Hardest 5: [('Maine Coon', 0.21818183362483978), ('Ragdoll', 0.3499999940395355), ('British Shorthair', 0.38181817531585693), ('Russian Blue', 0.4000000059604645), ('American Pit Bull Terrier', 0.4363636076450348)]
+Easiest 5: [('Japanese Chin', 0.9818181991577148), ('Keeshond', 0.9846153855323792), ('Newfoundland', 0.9846153855323792), ('Samoyed', 0.985714316368103), ('German Shorthaired', 1.0)]

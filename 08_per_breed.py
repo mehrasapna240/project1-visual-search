@@ -36,3 +36,4 @@ for b in range(37):
 ranked = sorted(scores.items(), key=lambda x:x[1])
 print("Hardest 5:", ranked[:5])
 print("Easiest 5:", ranked[-5:])   
+
